@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>function try and catch</h1>
+	<script>
+		"use strict"
+		
+		try {
+			console.log("age=", age);
+		} catch(error) {
+			console.log(error.message);
+		}
+		
+		console.log("1 name=", name);
+		var name="Superman";
+		console.log("2 name=", name); // name = Superman
+		
+		console.log("before plus: ", plus(10, 20));
+		
+		try{
+			console.log("before plus2(): ", plus2(10, 20));
+		}catch(error){
+			console.log("before plus2():", error.message);
+		}
+		
+		function plus(a, b){
+			return a + b;
+		}
+		
+		var plus3 = plus;
+		
+		var plus2 = function(a, b){
+			return a + b;
+		}
+		
+		console.log(plus(10,20));
+		console.log(plus2(10, 20));
+		console.log(plus3(10, 20));
+		
+	</script>
+
+</body>
+</html>

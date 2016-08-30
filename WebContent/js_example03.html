@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>explicit and implicit</title>
+</head>
+<body>
+	<h1>test test test test</h1>
+	
+	
+	<script type="text/javascript">
+		"use strict"
+		
+		console.log("test... ok");
+		window.console.log("original commend!");
+		
+		//Q1 number
+		
+		console.log(window.Number(undefined)); //result NaN
+		
+		console.log(Number(null)); //result zero
+		console.log(Number(true)); //result 1
+		console.log(Number(false)); //result 0
+		console.log(Number("")); //result 0
+		console.log(Number("3.14")); //result 3.14
+		console.log(Number(10)); //result 10
+		console.log(Number("ok")); //result NaN
+		
+		console.log("===== String ====");
+		console.log(window.String(undefined));
+		console.log(String(null));
+		console.log(String(true));
+		console.log(String(false));
+		
+		console.log(String(""));
+		console.log(String("3.14"));
+		console.log(String("ok"));
+		console.log(String(10));
+		console.log(String(NaN));
+		console.log(String({name:'adrian', age:20}));
+		
+		console.log("===== boolean ====");
+		console.log(window.Boolean(undefined));
+		console.log(window.Boolean(null));
+		console.log(window.Boolean(true));
+		console.log(window.Boolean(false));
+		console.log(window.Boolean(""));
+		console.log(window.Boolean("3.14"));
+		console.log(window.Boolean("ok"));
+		console.log(window.Boolean(10));
+		console.log(window.Boolean(NaN));
+		console.log(Boolean({name:'adrian', age:20}));
+		
+		console.log("===== Object ====");
+		console.log(window.Object(undefined));
+		console.log(Object(null));
+		console.log(Object(true));
+		console.log(Object(false));
+		console.log(Object(""));
+		console.log(Object("3.14"));
+		console.log(Object("ok"));
+		console.log(Object(10));
+		console.log(Object({name:'adrian', age: 19}));
+		
+		console.log("===== Implicit ====");
+		console.log(20 && 30);
+		console.log(20 || 30);
+		console.log("20" - "30");
+	</script>
+</body>
+</html>

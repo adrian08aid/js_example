@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Variables example 02</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		"use strict"
+		
+		//No. 1
+		
+		var $test, _test, test, $123;
+		
+		var adrianPogiTo;
+		
+		var v1 = true;
+		
+		var v2 = !v1;
+		
+		console.log(v2);
+		
+		console.log("and operator");
+		
+		console.log("and: true && true = ", true && true);
+		console.log("and: true && false = ", true && false);
+		console.log("and: false && true = ", false && true);
+		console.log("and: false && false = ", false && false);
+		
+		console.log("or operator");
+		console.log("or: true || true = ", true || true);
+		console.log("or: true || false = ", true || false);
+		console.log("or: false || true = ", false || true);
+		console.log("or: false || false = ", false || false);
+		
+		// logical Operators
+		var age = 32;
+		if (age >= 19 && age <= 39)
+			console.log("I am a young man");
+		
+		if (age < 19 || age >= 32)
+			console.log("Can not enter the club")
+			
+		// unlogical operators
+		// X & Y -> X 
+		// X | Y -> X
+		
+		var age2 = 18;
+		(age2 >= 19) & console.log("I can Vote!");
+		(age2 >= 19) | console.log("I cannot vote!");
+		
+		if(age2 >= 19) console.log("if: I can vote!");
+		else console.log("else: i Cannot vote!");
+		
+		var a = 20;
+		var b = 30;
+		
+		//a = a + b;
+		
+		a += b;
+		console.log(a);
+		
+		var x = 10;
+		var y = 20;
+		
+		console.log(x == y); //false
+		console.log(10 == "10"); //true
+		console.log(10 === "10"); //data type check false
+		
+		console.log("<== typeof ==>");
+		console.log(typeof "adrian"); //string
+		console.log(typeof '10'); //string
+		console.log(typeof 10); //number
+		console.log(typeof 3.14); //number
+		console.log(typeof true); //boolean
+		console.log(typeof [90,80,70]); //object
+		console.log(typeof {name: 'adrian', age:17}); //object
+		console.log(typeof function(){}); //function
+		
+		var ok;
+		console.log(typeof ok); //undefined
+		
+		//Conditional operator
+		//Q ? R1 : R2;
+		
+		var cond = "student1";
+		console.log(cond == "student" ? "I am a ITTC student" : "I am a child");
+		
+		// ++, -- operator
+		// ++X => X = X + 1;
+		// --X => X = X- 1;
+		
+		var v1 = 3;
+		var sum1 = ++v1 + ++v1 + ++v1;
+		console.log(v1, sum1);
+		
+		// X++, X-- operator
+		var v2 = 3;
+		var sum2 = v2++ + v2++ + v2++;
+		
+		console.log(v2, sum2)
+		
+		
+		
+	</script>
+</body>
+</html>

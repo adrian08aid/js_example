@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>array and for</title>
+</head>
+<body>
+
+	<script>
+		"use strict"
+		
+		/* var scores = [100, 99, 98, 80, 100];
+		console.log(scores);
+		
+		console.log(scores[0]);
+		console.log(scores[0],scores[1],scores[2],scores[3],scores[4]);
+		console.log(scores.length);
+		
+		// Array.prototype.po();
+		
+		console.log(scores.pop());
+		console.log(scores);
+		
+		// Array.prototype.push();
+		
+		scores.push(120);
+		scores.push(50);
+		scores.push(1,10);
+		console.log(scores);
+	 */	
+		//insert array data
+		var scores2 = [100, 200,];
+		console.log(scores2);
+		
+		scores2 [1] = 150;
+		console.log(scores2);
+		
+		scores2 [2] = 200;
+		console.log(scores2);
+		
+		scores2 [10] = 1000;
+		console.log(scores2.length, scores2);
+		
+		
+		var scores3 = ["English",100,'100',80,true,{name:'adrian',age: 19},3.14];
+		
+		console.log(scores3[0]);
+		
+		/* =========== for and while ==========*/
+	/* 	console.log("=======for 01===========")
+		//for 01
+		for(var i=0; i < scores3.length; i++) {
+			console.log(i + " : ", scores3[i]);
+		}
+		
+		console.log("=======for 02===========")
+		//for 02
+		var i = 0;
+		for( ; i < scores3.length; i++){
+			console.log(i + " : ", scores3[i]);
+		}
+		
+		console.log("=======for 03===========")
+		//for 03
+		var i = 0;
+		for( ; i < scores3.length;){
+			console.log(scores3[i]);
+			i += 1; // <== i = i + 1;
+		} */
+		
+		/* //while 01
+		console.log("=======while 01===========");
+		
+		var i = 0;
+		while(i<scores3.length){
+			console.log(scores3[i]);
+			i += 1;
+		}
+		
+		//while 02
+		console.log("=======while 02===========");
+		var i = 0;
+		while (true){
+			if(i >= scores3.length){
+				break;
+			}
+			console.log(scores3[i]);
+			i += 1;
+		} 
+		
+		//Q
+		
+		var i = 0;
+		while(i < scores3.length){
+			if((typeof scores3[i]) == 'number'){
+				console.log(scores3[i]);
+			}
+			i++;
+		}
+		*/
+		
+		//for.. in..
+		console.log("=======for.. in..===========");
+		for (var i in scores3){
+			console.log(scores3[i]);
+		}
+		
+		//do.. while..
+		console.log("=======do.. while..===========");
+		
+		var i = 0;
+		do {
+			console.log(scores3[i]);
+			i++;
+		} while(i < scores3.length);
+	</script>
+</body>
+</html>
