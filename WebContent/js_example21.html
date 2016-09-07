@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM API</title>
+</head>
+<body>
+	<h1>DOM API - Create Elements</h1>
+	
+	<form>
+		<textarea id="message" style="width: 400px; height: 60px;"></textarea>
+		<input type="button" Onclick="addMessage();" value="Click Me" />
+	</form>
+	
+	<div id="feedList"></div>
+
+
+	<script>
+	"use strict"
+		
+		function addMessage(){
+			var msg = document.getElementById('message');
+			
+			var p = document.createElement('p');
+			p.innerHTML = msg.value;
+			msg.value = '';
+			
+			var hr = document.createElement('hr');
+			
+			var div = document.getElementById('feedList');
+			
+			div.appendChild(p);
+			div.appendChild(hr);
+		}
+	</script>
+</body>
+</html>

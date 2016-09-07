@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>data and method </title>
+<script src="calculator2.js"></script>
+</head>
+<body>
+	<script>
+	"use strict"
+	
+		//3 * 2 + 7 - 5 = 8
+		//8 - 4 * 2 / 9 = ??
+		
+		var calc1 = makeCalculator();
+		var calc2 = makeCalculator();
+		
+		calc1.init(3);
+		calc2.init(8);
+		
+		calc1.multiple(2);
+		calc2.minus(4);
+		
+		calc1.plus(7);
+		calc2.multiple(2);
+		
+		calc1.minus(5);
+		calc2.divide(9);
+		
+		calc1.printResult();
+		calc2.printResult();
+	</script>
+</body>
+</html>

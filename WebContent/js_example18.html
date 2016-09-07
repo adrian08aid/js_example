@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>constructor function</title>
+<script src="calculator3.js"></script>
+</head>
+<body>
+	<p>new Calculator()</p>
+	<script>
+	"use strict"
+	
+	var calc1 = new Calculator();
+	var calc2 = new Calculator();
+	
+	calc1.init(3);
+	calc2.init(8);
+	
+	calc1.multiple(2);
+	calc2.minus(4);
+	
+	calc1.plus(7);
+	calc2.multiple(2);
+	
+	calc1.minus(5);
+	calc2.divide(9);
+	
+	calc1.printResult(); //3 * 2 + 7 - 5 = 8
+	calc2.printResult(); //8 - 4 * 2 / 9 = ??
+	</script>
+</body>
+</html>

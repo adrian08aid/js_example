@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+</head>
+<body>
+	<h1>DOM API - finding elements</h1>
+	
+	
+	<div id="d1">
+		<div id="d11">
+			<h1 id="header01" class="c1 c2 ">Test 1</h1>
+			<p class="c1 c2">test.... lang to</p>
+			<h1 id="header02">Test 2</h1>
+			<p> Test 2 toooo... !</p>
+		</div>
+	</div>
+	
+		<div id="d12">
+			<h1 id="header03" class="c2">Test 3</h1>
+			<p class="c1 c2">test.... lang to 3</p>
+			<h1 id="header02">Test 4</h1>
+			<p> Test 4 toooo... ! 4</p>
+		</div>
+	
+	<div id="d2">
+			<h1 id="header05" class="c1">Test 5</h1>
+			<p class="c1">test5.... lang to</p>
+			<h1 id="header06">Test 6</h1>
+			<p> Test 6 toooo... !</p>
+	</div>
+	
+		<div id="d32">
+			<h1>Test 7</h1>
+			<p> This document has been reviewed by w3c Member,
+			by the software developers, and by other w3c groups.....</p>
+		</div>
+		
+		
+		
+		
+		
+		
+	<script>
+	"use strict"
+		var e1 = document.getElementById('header05');
+		console.log(e1.innerHTML);
+		
+		var text = prompt('input text!');
+		e1.innerHTML = text;
+		
+		
+	</script>
+</body>
+</html>
