@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object oriented Programming</title>
+</head>
+<body>
+	<script>
+		"use strict"
+		
+		var students = [{ name: 'adrian', eng: 90, math: 99, kor: 89},
+		                { name: 'dave', eng: 75, math: 74, kor: 70},
+		                { name: 'jerome', eng: 10, math: 15, kor: 16}];
+		
+		console.log("========= for ========");
+		console.log(students.length);
+		for (var i = 0; i<students.length; i++){
+			 console.log(students[i].name, 
+					students[i].eng, 
+					students[i].math, 
+					students[i].kor);
+		}
+		
+		console.log("========= forEach ========");
+		function student(students){
+			console.log(students.name, students.eng, students.math, students.kor);
+		}
+		students.forEach(student);
+		
+		console.log("========= forEach example ========");
+		students.forEach(function(student){
+			console.log(student.name,
+						student.eng,
+						student.math,
+						student.kor);
+		});
+		
+		
+		
+	</script>
+</body>
+</html>

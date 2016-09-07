@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object </title>
+</head>
+<body>
+
+	<script>
+		"use strict"
+		//basic rule
+		var obj1 = new Object(); 
+		
+		obj1.name = "Adrian Cruz";
+		obj1.age = 20;
+		obj1.tel = "0919-000-1111"
+		obj1['address'] = "Ortigas center";
+		obj1['postno'] = "111-222";
+		obj1["memo"] = "Hello world !";
+		
+		console.log(obj1.name, obj1.age, obj1.tel, obj1.address, obj1.postno, obj1.memo);
+		
+		//short code 1
+		var student = {};
+		student.name = "adrian";
+		student.age = 19;
+		student.email = "adrian@google.com";
+		student.tel = "0919-000-1111";
+		student.add = "antipolo";
+		
+		//short code 2
+		var student2 = {
+			name: "adrian cruz",
+			email: 'adrian@msn.com',
+			tel: '0919-000-1111',
+			age: 18,
+			add: 'pasig'
+		}
+		
+		console.log(student, student2);
+	</script>
+</body>
+</html>

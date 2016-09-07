@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> function</title>
+</head>
+<body>
+	<script>
+		"use strict"
+		
+		function student(name, kor, eng, math){
+			this.name = name;
+			this.kor = kor;
+			this.eng = eng;
+			this.math = math;
+		}
+		
+		var students = [new student('adrian', 10, 20, 30),
+						new student('dave', 1, 2, 3),
+						new student('jerome', 90, 80, 70)];
+		
+		students.forEach(function(student){
+			console.log(student.name, student.kor, student.eng, student.math);
+		});
+	</script>
+</body>
+</html>
