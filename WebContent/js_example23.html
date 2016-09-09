@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>create elements</title>
+</head>
+<body>
+	<h1>DOM API = create elements</h1>
+	
+	
+	
+	
+	<script>
+	"use strict"
+	// document.createElement('p');
+	// appendChild
+	var p = document.createElement('p');
+	document.body.appendChild(p);
+	
+	// document.createTextNode(text);
+	var p2 = document.createElement('p');
+	var text = document.createTextNode('<b>test testthis is a test</b>');
+	p2.appendChild(text);
+	document.body.appendChild(p2);
+	
+	// Element.innerHTML
+	var p3 = document.createElement('p');
+	p3.innerHTML = '<b>This is Test text</b>';
+	document.body.appendChild(p3);
+	
+	//document.body.innerHTML : change body data text;
+	document.body.innerHTML = 'Magandang Umaga!';
+	</script>
+</body>
+</html>

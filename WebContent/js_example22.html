@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Find elements</title>
+</head>
+<body>
+	<h1>DOM API: Find elements</h1>
+	
+	<div id="d1">
+		<div id="d11">
+			<h1 id="header1" class="c1 c2">Test1</h1>
+			<p class="c1 c2">test... 1</p>
+			
+			<h1 id="header2">Test2</h1>
+			<p>test... 2</p>
+		</div>
+		
+		<div id="d12">
+			<h1 id="header3" class="c2">Test3</h1>
+			<p class="c2">test... 3</p>
+			
+			<h1 id="header4">Test4</h1>
+			<p>test... 4</p>
+		</div>
+	</div>
+	
+	<div id="d2">
+		<h1 id="header5" class="c1">Test5</h1>
+		<p class="c1">test... 5</p>
+		
+		<h1 id="header6">Test6</h1>
+		<p>test... 6</p>
+		
+		<div id="d3">
+			<h1>Test7</h1>
+			<p>This document has been reviewed the functionality and of the Web.</p>
+		</div>
+	</div>
+	
+	
+	<script>
+	"use strict"
+	
+	// document.getElementById(id) : DOM Find the id of the element to go from tree.
+	// element.innerHTML : Keep the content of the element
+	
+	var e1 = document.getElementById('header5');
+	console.log(e1.innerHTML);
+	
+	// Problem: #d3 Print the contents of an element(id person)
+	console.log('d3 Contents =========================')
+	var e2 = document.getElementById('d3');
+	console.log(e2.innerHTML);
+	
+	// document.getElementsMyTagName(tagName)
+	// The return value is an array
+	
+	console.log('Find by Tag Name ====================')
+	var pList = document.getElementsByTagName('p');
+	console.log(pList.length);
+	console.log(pList);
+	
+	for (var i = 0; i < pList.length; i++){
+		console.log(pList[i].innerHTML);
+	}
+	
+	console.log('document.querySelector =====================');
+	// document.querySelector(selectorGrammar); // Targeting Complex
+	//yes:  CSS selector -> #header5
+	var e3 = document.querySelector('#header5');
+	console.log(e3.innerHTML);
+	
+	// Problem: #d3 Find the value of p Print out all the tags below.
+	var d12 = document.getElementById('d12'); //getElementById 1 find
+	var pList = d12.getElementsByTagName('p');
+	
+	for(var i = 0; i < pList.length; i++){
+		console.log(pList[i].innerHTML);
+	}
+	
+	// document.querySelectorAll(#d11 p.c1);
+	console.log('document.querySelectorAll =====================');
+	var pList = document.querySelectorAll('#d11 p.c1');
+	for (var i = 0; i < pList.length; i++){
+		console.log(pList[i].innerHTML);
+	}
+	</script>
+</body>
+</html>
