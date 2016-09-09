@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM API = Add Element Attribute</title>
+</head>
+<body>
+	<h1>DOM API = Add ELement Attribute</h1>
+	
+	<script>
+	"use strict"
+	
+	// create img tag
+	var img = document.createElement('img');
+	document.body.appendChild(img);
+	
+	// img.src = "img/sugi.jpg" == ok
+	img['src'] = "img/suji.jpg";
+	
+	// img['data-Number'] == '2016'; == no
+	
+	// setAttribute('src', 'file name');
+	var img2 = document.createElement('img');
+	document.body.appendChild(img2);
+	img2.setAttribute('src', 'img/suji.jpg');
+	img2.setAttribute('data-Number', '20160909');
+	
+	// onMouseClick, onClick
+	img.onmouseover = function(){
+		img.src = 'img/suji2.jpg';
+	}
+	
+	img.onmouseout = function(){
+		img.src = 'img/suji.jpg';
+	}
+	
+	img.onclick = function(){
+		location.href="http://ittc.kr";
+	}
+	</script>
+</body>
+</html>
