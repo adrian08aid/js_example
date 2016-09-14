@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OnXXXX event</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<h1>Events : onXXXX</h1>
+	
+	<div id="d1">
+		<div id="d11"><h1 id="h01">D11 </h1></div>
+		<div id="d12"><h1 id="h02">D12</h1></div>
+	</div>
+	
+	<div id="d2">
+		<div id="d21"><h1 id="h03">D21</h1></div>
+		<div id="d22"><h1 id="h04" onclick="alert('h04 Clicked!');">D22</h1></div>
+		<h1 id="h05" onclick="goodm();">Good morning!!!</h1>
+	</div>
+
+	<script>
+	"use strict";
+	
+	//standard
+	var h01 = document.getElementById("h01");
+	h01.onclick = clickH01;
+	
+	function clickH01(event){
+		alert("h01 clicked!!!");
+	}
+	
+	//short code
+	var h02 = document.getElementById("h02");
+	h02.onclick = function(event){
+		alert("h02 clicked!!!");
+	};
+	
+	//shortest code
+	document.getElementById("h03").onclick = function(event){
+		alert("h03 clicked!!!");
+	};
+	
+	
+	function goodm(){
+		var input = Number(prompt("How old are you?","20"));
+		if(input < 19){
+			alert("student");
+		}else{
+			alert("adult");
+		}
+	}
+	</script>
+</body>
+</html>
