@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>addEventListener()</title>
+</head>
+<body>
+	<h1>addEventListener()</h1>
+	
+	<div id="d1">
+		<div id="d11"><h1 id="h01">D11 </h1></div>
+		<div id="d12"><h1 id="h02">D12</h1></div>
+	</div>
+	
+	<div id="d2">
+		<div id="d21"><h1 id="h03">D21</h1></div>
+		<div id="d22"><h1 id="h04" onclick="console.log('h04 Clicked!');">D22</h1></div>
+	</div>
+	
+	
+	<script>
+	"use strict";
+	
+	 var h02 = document.getElementById("h01");
+	 
+	 h01.addEventListener('click', function(event){
+		alert("h01 Clicked!"); 
+	 });
+	 
+	 h01.addEventListener('click', function(event){
+		 alert("h01 Clicked2!");
+	 });
+	 
+	 h01.addEventListener('click', function(event){
+		 alert("h01 Clicked3");
+	 });
+	 
+	 var h02 = document.getElementById("h02");
+	 
+	 h02.onclick = function(event){
+		 alert("h02 Clicked");
+	 }
+	 
+	 var h04 = document.getElementById("h04");
+	 
+	 h04.addEventListener('click', function(event){
+		 console.log("addEventListener() add!");
+	 });
+	 
+	 h04.onclick = function(event){
+		 console.log("onclick event add!!");
+	 }
+	</script>
+</body>
+</html>
